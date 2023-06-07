@@ -6,7 +6,7 @@
 
 <h4>
 
-1) Linear regression
+1) Linear regression ✅
 
 2) Logistic regression
 
