@@ -1,0 +1,50 @@
+Gspreadsheet Live Dataset
+
+create project
+
+open project
+
+enable required api (google drive api, google speets api)
+
+go to credentials
+
+create credentials
+
+service account
+
+name of service account (an email will be created)
+
+create & continue
+
+manage service account acorss service account email address
+
+action 3 dot option
+
+manage keys
+
+add key
+
+create key
+
+json file 
+
+create
+
+a file will be created & don't forget to copy your mail from service account
+
+from google spreadsheet, go share your email as a viewer.
+
+we're done in now.
+
+now come to jupyter notebook
+
+import pandas
+import gspread (install gspread)
+
+gc = gspread.service_account(filename = "path of json file")
+
+mydataset = gc.open_by_url("copy url of gspreadsheet")
+
+ws = mydataset.worksheet("sheet name")
+
+df = pf.DataFrame(ws.get_all_records())
